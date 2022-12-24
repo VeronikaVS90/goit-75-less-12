@@ -256,7 +256,7 @@
             </svg>
           </button>
           <h2 class="modal-title">Залиште свої дані</h2>
-          <form name="contact-form" autocomplete="on">
+          <form class="modal-form" name="contact-form" autocomplete="on">
             <!-- <label class="form-field-label" for="test">Тест</label>
             <div class="form-field">
               <input
@@ -282,6 +282,7 @@
                 name="user-name"
                 pattern="^[Є-Яа-ї]+\s[Є-Яа-ї]+$"
                 title="Поле повинно містити імя та прізвище"
+                placeholder=" "
                 required
               />
               <svg class="form-field-icon" width="16" height="16">
@@ -291,7 +292,14 @@
 
             <label class="form-field-label" for="user-tel">Телефон<sup>*</sup></label>
             <div class="form-field">
-              <input class="form-field-input" id="user-tel" type="tel" name="user-tel" required />
+              <input
+                class="form-field-input"
+                id="user-tel"
+                type="tel"
+                name="user-tel"
+                placeholder=" "
+                required
+              />
               <svg class="form-field-icon" width="16" height="16">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
@@ -304,6 +312,7 @@
                 id="user-email"
                 type="email"
                 name="user-email"
+                placeholder=" "
                 required
               />
               <svg class="form-field-icon" width="16" height="16">
