@@ -247,7 +247,7 @@
       </div>
     </footer>
 
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <div class="modal-container">
           <button class="modal-close" type="button" data-modal-close>
@@ -256,26 +256,56 @@
             </svg>
           </button>
           <h2 class="modal-title">Залиште свої дані</h2>
-          <form name="contact-form" autocomplete="on" novalidate>
-            <label class="form-field-label" for="user-name">Ім'я</label>
+          <form name="contact-form" autocomplete="on">
+            <!-- <label class="form-field-label" for="test">Тест</label>
             <div class="form-field">
-              <input class="form-field-input" id="user-name" type="text" name="user-name" />
+              <input
+                class="form-field-input"
+                id="test"
+                type="number"
+                name="test"
+                min="2"
+                max="20"
+                title="Значення повинно бути від 2 до 20"
+              />
+              <svg class="form-field-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div> -->
+
+            <label class="form-field-label" for="user-name">Ім'я<sup>*</sup></label>
+            <div class="form-field">
+              <input
+                class="form-field-input"
+                id="user-name"
+                type="text"
+                name="user-name"
+                pattern="^[Є-Яа-ї]+\s[Є-Яа-ї]+$"
+                title="Поле повинно містити імя та прізвище"
+                required
+              />
               <svg class="form-field-icon" width="16" height="16">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
             </div>
 
-            <label class="form-field-label" for="user-tel">Телефон</label>
+            <label class="form-field-label" for="user-tel">Телефон<sup>*</sup></label>
             <div class="form-field">
-              <input class="form-field-input" id="user-tel" type="tel" name="user-tel" />
+              <input class="form-field-input" id="user-tel" type="tel" name="user-tel" required />
               <svg class="form-field-icon" width="16" height="16">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </div>
 
-            <label class="form-field-label" for="user-email">Пошта</label>
+            <label class="form-field-label" for="user-email">Пошта<sup>*</sup></label>
             <div class="form-field">
-              <input class="form-field-input" id="user-email" type="email" name="user-email" />
+              <input
+                class="form-field-input"
+                id="user-email"
+                type="email"
+                name="user-email"
+                required
+              />
               <svg class="form-field-icon" width="16" height="16">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
@@ -291,8 +321,13 @@
 
             <div class="form-field-checkbox">
               <label class="checkbox-label"
-                ><input class="checkbox-input" type="checkbox" name="terms-checkbox" />Погоджуюся з
-                розсилкою та приймаю <a href="#" class="checkbox-link">Умови договору</a></label
+                ><input
+                  class="checkbox-input"
+                  type="checkbox"
+                  name="terms-checkbox"
+                  checked
+                />Погоджуюся з розсилкою та приймаю
+                <a href="#" class="checkbox-link">Умови договору</a></label
               >
             </div>
 
